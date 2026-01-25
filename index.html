@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>498 Move-In Ready Home Makeover</title>
+  <meta name="description" content="We turn your new space into a fully styled, luxury-feeling home in 7 days or less — or you get ₦100,000 back.">
+
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card: #161616;
+      --text: #f5f5f5;
+      --muted: #b3b3b3;
+      --accent: #c9a24d;
+      --border: #262626;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(201,162,77,0.15);
+      color: var(--accent);
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+      max-width: 700px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      padding: 0.9rem 1.4rem;
+      border-radius: 10px;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.6rem;
+    }
+
+    .feature span {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .guarantee {
+      border: 1px dashed var(--accent);
+      border-radius: 18px;
+      padding: 2rem;
+      background: rgba(201,162,77,0.08);
+    }
+
+    .steps {
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #000;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+    }
+
+    .cta {
+      text-align: center;
+      background: linear-gradient(180deg, rgba(201,162,77,0.15), transparent);
+      border-radius: 22px;
+      padding: 3rem 1.5rem;
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="container hero">
+    <div>
+      <span class="badge">Limited: 5 clients per month</span>
+      <h1>Your home, fully styled in 7 days — or you get ₦100,000 back.</h1>
+      <p>
+        The <strong>498 Move-In Ready Home Makeover</strong> transforms empty or mismatched spaces into warm, luxury-feeling homes without stress, guesswork, or endless shopping.
+      </p>
+      <a href="#cta" class="btn">Book Your Makeover</a>
+    </div>
+
+    <div class="hero-card">
+      <h3>Perfect for:</h3>
+      <p>• New renters & homeowners<br>
+         • Busy professionals<br>
+         • Anyone who wants a finished home fast</p>
+      <p><strong>No showroom visits.</strong><br>
+         <strong>No decision fatigue.</strong><br>
+         <strong>No wasted money.</strong></p>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section class="container">
+    <h2>Everything your home needs — done for you</h2>
+    <div class="grid grid-3">
+      <div class="feature">
+        <span>Included</span>
+        <h3>Bedsheets & Duvet Set</h3>
+        <p>Curated to match your space and style.</p>
+      </div>
+      <div class="feature">
+        <span>Included</span>
+        <h3>Curtains or Blinds</h3>
+        <p>Measured, delivered, and installed.</p>
+      </div>
+      <div class="feature">
+        <span>Included</span>
+        <h3>Furniture Essentials</h3>
+        <p>Room-appropriate pieces that fit the layout.</p>
+      </div>
+      <div class="feature">
+        <span>Included</span>
+        <h3>Artificial Plants</h3>
+        <p>Placed for balance, warmth, and depth.</p>
+      </div>
+      <div class="feature">
+        <span>Included</span>
+        <h3>Ornaments & Decor</h3>
+        <p>Styled — never cluttered.</p>
+      </div>
+      <div class="feature">
+        <span>Bonus</span>
+        <h3>Free Style Direction</h3>
+        <p>Modern, minimal, luxury, or cozy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="container">
+    <h2>Our simple 4-step process</h2>
+    <div class="grid steps">
+      <div class="step">
+        <h3>Style Match Call</h3>
+        <p>You send room photos and preferences.</p>
+      </div>
+      <div class="step">
+        <h3>48-Hour Style Plan</h3>
+        <p>You approve the moodboard and items.</p>
+      </div>
+      <div class="step">
+        <h3>Delivery & Installation</h3>
+        <p>We bring everything and set it up.</p>
+      </div>
+      <div class="step">
+        <h3>Final Walkthrough</h3>
+        <p>We adjust until it feels right.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section class="container">
+    <div class="guarantee">
+      <h2>Our unfair guarantee</h2>
+      <p>
+        If your home isn’t fully styled within <strong>7 days</strong>, you receive <strong>₦100,000 back</strong>.
+        <br><br>
+        Don’t love the look? We re-style once — free.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="container">
+    <div id="cta" class="cta">
+      <h2>Ready for a finished home?</h2>
+      <p>
+        We only accept <strong>5 makeover clients per month</strong> to maintain quality.
+      </p>
+      <a href="https://wa.me/234XXXXXXXXXX" class="btn">Book via WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    © 498 Interiors — Move-In Ready Home Makeovers
+  </footer>
+
+</body>
+</html>
