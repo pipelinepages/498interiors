@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>498 Move-In Ready Home Makeover</title>
-  <meta name="description" content="We turn your new space into a fully styled, luxury-feeling home in 7 days or less">
+  <title>498 Interiors — Perfect-Fit Home Bundles</title>
+  <meta name="description" content="Pre-matched home essentials that fit, match, and arrive fast. One free swap if anything feels off." />
 
   <style>
     :root {
       --bg: #0f0f0f;
-      --card: #161616;
+      --card: #181818;
       --text: #f5f5f5;
       --muted: #b3b3b3;
-      --accent: #c9a24d;
-      --border: #262626;
+      --accent: #d4af37;
+      --border: #2a2a2a;
     }
 
     * {
@@ -36,251 +36,275 @@
 
     .container {
       max-width: 1100px;
-      margin: 0 auto;
+      margin: auto;
       padding: 4rem 1.5rem;
     }
 
-    .badge {
-      display: inline-block;
-      background: rgba(201,162,77,0.15);
-      color: var(--accent);
-      padding: 0.4rem 0.8rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
-      margin-bottom: 0.75rem;
-    }
-
-    h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      color: var(--muted);
-      margin-bottom: 1.2rem;
-      max-width: 700px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: #000;
-      padding: 0.9rem 1.4rem;
-      border-radius: 10px;
-      font-weight: 600;
-      margin-top: 1rem;
-    }
-
+    /* HERO */
     .hero {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 3rem;
-      align-items: center;
+      text-align: center;
+      padding-bottom: 4rem;
     }
 
-    .hero-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 2rem;
-    }
-
-    .grid {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .feature {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.6rem;
-    }
-
-    .feature span {
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .guarantee {
-      border: 1px dashed var(--accent);
-      border-radius: 18px;
-      padding: 2rem;
-      background: rgba(201,162,77,0.08);
-    }
-
-    .steps {
-      counter-reset: step;
-    }
-
-    .step {
-      position: relative;
-      padding-left: 3rem;
-    }
-
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #000;
-      display: grid;
-      place-items: center;
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
       font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 720px;
+      margin: 0 auto 2rem;
     }
 
     .cta {
-      text-align: center;
-      background: linear-gradient(180deg, rgba(201,162,77,0.15), transparent);
-      border-radius: 22px;
-      padding: 3rem 1.5rem;
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      padding: 1rem 2rem;
+      font-weight: 600;
+      border-radius: 6px;
+    }
+
+    /* TRUST STRIP */
+    .trust {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .trust div {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 8px;
       border: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    /* SECTION */
+    section {
+      margin-top: 5rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    section p.lead {
+      text-align: center;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+
+    /* BUNDLES */
+    .bundles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .bundle {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .bundle h3 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .bundle ul {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .bundle li {
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .bundle .tag {
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-size: 0.8rem;
+      background: #222;
+      padding: 0.4rem 0.7rem;
+      border-radius: 4px;
+      color: var(--accent);
+    }
+
+    /* GUARANTEES */
+    .guarantees {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .guarantee {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .guarantee h4 {
+      margin-bottom: 0.5rem;
+    }
+
+    .guarantee p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* FOOTER CTA */
+    .final {
+      text-align: center;
+      background: linear-gradient(180deg, transparent, #111);
+      padding-top: 4rem;
     }
 
     footer {
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2rem;
       color: var(--muted);
       font-size: 0.85rem;
     }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-    }
   </style>
 </head>
+
 <body>
 
-  <!-- HERO -->
-  <section class="container hero">
-    <div>
-      <span class="badge">Limited: 5 clients per month</span>
-      <h1>Your home, fully styled in 7 days</h1>
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+      <h1>The 498 Perfect-Fit Home Bundles</h1>
       <p>
-        The <strong>498 Move-In Ready Home Makeover</strong> transforms empty or mismatched spaces into warm, luxury-feeling homes without stress, guesswork, or endless shopping.
+        Pre-matched home essentials that fit, match, and arrive fast —
+        without the stress of guessing or wasting money.
       </p>
-      <a href="#cta" class="btn">Book Your Makeover</a>
+      <a href="#bundles" class="cta">View Available Bundles</a>
+
+      <div class="trust">
+        <div>✔ Pre-matched color themes</div>
+        <div>✔ One free swap if anything feels off</div>
+        <div>✔ Fast nationwide delivery</div>
+      </div>
     </div>
 
-    <div class="hero-card">
-      <h3>Perfect for:</h3>
-      <p>• New renters & homeowners<br>
-         • Busy professionals<br>
-         • Anyone who wants a finished home fast</p>
-      <p><strong>No showroom visits.</strong><br>
-         <strong>No decision fatigue.</strong><br>
-         <strong>No wasted money.</strong></p>
-    </div>
-  </section>
-
-  <!-- WHAT YOU GET -->
-  <section class="container">
-    <h2>Everything your home needs — done for you</h2>
-    <div class="grid grid-3">
-      <div class="feature">
-        <span>Included</span>
-        <h3>Bedsheets & Duvet Set</h3>
-        <p>Curated to match your space and style.</p>
-      </div>
-      <div class="feature">
-        <span>Included</span>
-        <h3>Curtains or Blinds</h3>
-        <p>Measured, delivered, and installed.</p>
-      </div>
-      <div class="feature">
-        <span>Included</span>
-        <h3>Furniture Essentials</h3>
-        <p>Room-appropriate pieces that fit the layout.</p>
-      </div>
-      <div class="feature">
-        <span>Included</span>
-        <h3>Artificial Plants</h3>
-        <p>Placed for balance, warmth, and depth.</p>
-      </div>
-      <div class="feature">
-        <span>Included</span>
-        <h3>Ornaments & Decor</h3>
-        <p>Styled — never cluttered.</p>
-      </div>
-      <div class="feature">
-        <span>Bonus</span>
-        <h3>Free Style Direction</h3>
-        <p>Modern, minimal, luxury, or cozy.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="container">
-    <h2>Our simple 4-step process</h2>
-    <div class="grid steps">
-      <div class="step">
-        <h3>Style Match Call</h3>
-        <p>You send room photos and preferences.</p>
-      </div>
-      <div class="step">
-        <h3>48-Hour Style Plan</h3>
-        <p>You approve the moodboard and items.</p>
-      </div>
-      <div class="step">
-        <h3>Delivery & Installation</h3>
-        <p>We bring everything and set it up.</p>
-      </div>
-      <div class="step">
-        <h3>Final Walkthrough</h3>
-        <p>We adjust until it feels right.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- GUARANTEE -->
-  <section class="container">
-    <div class="guarantee">
-      <h2>Our unfair guarantee</h2>
-      <p>
-        If your home isn’t fully styled within <strong>7 days</strong>, you receive <strong>₦100,000 back</strong>.
-        <br><br>
-        Don’t love the look? We re-style once — free.
+    <!-- WHY -->
+    <section>
+      <h2>Buying Home Items Shouldn’t Feel Risky</h2>
+      <p class="lead">
+        Most people fear buying the wrong size, wrong color, or items that don’t
+        work well together. We remove that risk by selling only combinations
+        that already work.
       </p>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="container">
-    <div id="cta" class="cta">
-      <h2>Ready for a finished home?</h2>
-      <p>
-        We only accept <strong>5 makeover clients per month</strong> to maintain quality.
+    <!-- BUNDLES -->
+    <section id="bundles">
+      <h2>Choose a Bundle. Done.</h2>
+      <p class="lead">
+        Each bundle is pre-matched by theme and room type.
+        No styling service. No guesswork.
       </p>
-      <a href="https://wa.me/234XXXXXXXXXX" class="btn">Book via WhatsApp</a>
-    </div>
-  </section>
+
+      <div class="bundles">
+        <div class="bundle">
+          <span class="tag">Most Popular</span>
+          <h3>Bedroom Upgrade Bundle</h3>
+          <ul>
+            <li>✔ Bedsheet & duvet set</li>
+            <li>✔ Matching curtains or blinds</li>
+            <li>✔ Artificial plants</li>
+            <li>✔ Decorative ornaments</li>
+          </ul>
+          <a href="#" class="cta">Order This Bundle</a>
+        </div>
+
+        <div class="bundle">
+          <span class="tag">New Homes</span>
+          <h3>Living Room Refresh Bundle</h3>
+          <ul>
+            <li>✔ Curtains or blinds</li>
+            <li>✔ Artificial plants</li>
+            <li>✔ Ornaments</li>
+            <li>✔ Optional furniture add-ons</li>
+          </ul>
+          <a href="#" class="cta">Order This Bundle</a>
+        </div>
+
+        <div class="bundle">
+          <span class="tag">Limited Stock</span>
+          <h3>Essential Furniture Picks</h3>
+          <ul>
+            <li>✔ Room-appropriate furniture</li>
+            <li>✔ Neutral & luxury color options</li>
+            <li>✔ Quality-checked items only</li>
+          </ul>
+          <a href="#" class="cta">Browse Furniture</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARANTEES -->
+    <section>
+      <h2>Our Risk-Free Promise</h2>
+      <p class="lead">
+        We remove the fear from buying home items online.
+      </p>
+
+      <div class="guarantees">
+        <div class="guarantee">
+          <h4>Match-or-Replace Guarantee</h4>
+          <p>
+            If items in a bundle don’t work well together,
+            we replace one item free.
+          </p>
+        </div>
+
+        <div class="guarantee">
+          <h4>One-Time Free Swap</h4>
+          <p>
+            Wrong size or preference?
+            Swap once at no extra cost.
+          </p>
+        </div>
+
+        <div class="guarantee">
+          <h4>Delivery Assurance</h4>
+          <p>
+            If we miss our delivery window,
+            you receive a compensation bonus.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final">
+      <h2>Buy Once. Get It Right.</h2>
+      <p class="lead">
+        Limited stock per bundle.
+        Once a collection sells out, it’s gone.
+      </p>
+      <a href="#" class="cta">Order on WhatsApp</a>
+    </section>
+
+  </div>
 
   <footer>
-    © 498 Interiors — Move-In Ready Home Makeovers
+    © 498 Interiors — Quality Home Essentials
   </footer>
 
 </body>
