@@ -6,177 +6,273 @@
   <title>498 Interiors — Perfect-Fit Home Bundles</title>
   <meta name="description" content="Pre-matched home essentials that fit, match, and arrive fast. One free swap if anything feels off." />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #0f0f0f;
-      --card: #181818;
-      --text: #f5f5f5;
-      --muted: #b3b3b3;
-      --accent: #d4af37;
-      --border: #2a2a2a;
+      --bg: #050505;
+      --card-bg: rgba(20, 20, 20, 0.6);
+      --text: #ffffff;
+      --muted: #888888;
+      --accent: #d4af37; /* Gold */
+      --accent-hover: #f1cf6d;
+      --border: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.05);
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     body {
       background: var(--bg);
+      background-image: 
+        radial-gradient(circle at 50% -20%, #1a1a1a 0%, transparent 50%),
+        radial-gradient(circle at 0% 100%, #0a0a0a 0%, transparent 40%);
       color: var(--text);
-      line-height: 1.6;
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
-      padding: 4rem 1.5rem;
+      padding: 6rem 1.5rem;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4 {
+      letter-spacing: -0.03em;
+      line-height: 1.1;
     }
 
     /* HERO */
     .hero {
       text-align: center;
-      padding-bottom: 4rem;
+      padding: 4rem 0 8rem;
     }
 
     .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.2rem);
-      font-weight: 700;
-      margin-bottom: 1rem;
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-weight: 800;
+      background: linear-gradient(to bottom, #fff 40%, #777);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.5rem;
     }
 
     .hero p {
       color: var(--muted);
-      font-size: 1.1rem;
-      max-width: 720px;
-      margin: 0 auto 2rem;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      font-weight: 400;
     }
 
     .cta {
-      display: inline-block;
-      background: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      background: var(--text);
       color: #000;
-      padding: 1rem 2rem;
+      padding: 1rem 2.5rem;
       font-weight: 600;
-      border-radius: 6px;
+      border-radius: 100px;
+      font-size: 1rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+      background: var(--accent);
     }
 
     /* TRUST STRIP */
     .trust {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .trust div {
-      background: var(--card);
-      padding: 1.5rem;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      text-align: center;
-      font-size: 0.95rem;
-    }
-
-    /* SECTION */
-    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
       margin-top: 5rem;
     }
 
+    .trust div {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      padding: 0.8rem 1.5rem;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* SECTION HEADERS */
+    section {
+      margin-top: 10rem;
+    }
+
     section h2 {
-      font-size: 2rem;
+      font-size: clamp(2rem, 5vw, 2.8rem);
       margin-bottom: 1.5rem;
       text-align: center;
+      font-weight: 700;
     }
 
     section p.lead {
       text-align: center;
       color: var(--muted);
-      max-width: 700px;
-      margin: 0 auto 3rem;
+      max-width: 650px;
+      margin: 0 auto 4rem;
+      font-size: 1.1rem;
     }
 
-    /* BUNDLES */
+    /* BUNDLE CARDS */
     .bundles {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
     }
 
     .bundle {
-      background: var(--card);
-      padding: 2rem;
-      border-radius: 10px;
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      padding: 2.5rem;
+      border-radius: 24px;
       border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s ease;
+    }
+
+    .bundle:hover {
+      border-color: var(--accent);
+      transform: translateY(-8px);
+      background: rgba(30, 30, 30, 0.6);
     }
 
     .bundle h3 {
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
     }
 
     .bundle ul {
       list-style: none;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+      flex-grow: 1;
     }
 
     .bundle li {
       color: var(--muted);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .bundle .tag {
-      display: inline-block;
-      margin-bottom: 1rem;
-      font-size: 0.8rem;
-      background: #222;
-      padding: 0.4rem 0.7rem;
-      border-radius: 4px;
+      align-self: flex-start;
+      margin-bottom: 1.5rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: rgba(212, 175, 55, 0.1);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
       color: var(--accent);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .bundle .cta {
+      width: 100%;
+      justify-content: center;
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .bundle .cta:hover {
+      background: var(--text);
+      color: #000;
     }
 
     /* GUARANTEES */
     .guarantees {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
     }
 
     .guarantee {
-      background: var(--card);
-      padding: 2rem;
-      border-radius: 10px;
+      background: linear-gradient(145deg, rgba(20,20,20,0.4), rgba(10,10,10,0.4));
+      padding: 3rem 2rem;
+      border-radius: 24px;
       border: 1px solid var(--border);
+      text-align: center;
     }
 
     .guarantee h4 {
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      color: var(--accent);
     }
 
     .guarantee p {
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
-    /* FOOTER CTA */
+    /* FINAL CTA */
     .final {
       text-align: center;
-      background: linear-gradient(180deg, transparent, #111);
-      padding-top: 4rem;
+      padding: 10rem 1.5rem;
+      background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+      border-radius: 40px;
+      margin-bottom: 4rem;
     }
 
+    .final h2 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 4rem 2rem;
+      border-top: 1px solid var(--border);
       color: var(--muted);
       font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero, .trust, section {
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 4rem 1.2rem; }
+      section { margin-top: 6rem; }
+      .hero { padding: 2rem 0 4rem; }
     }
   </style>
 </head>
@@ -185,7 +281,6 @@
 
   <div class="container">
 
-    <!-- HERO -->
     <div class="hero">
       <h1>The 498 Perfect-Fit Home Bundles</h1>
       <p>
@@ -201,7 +296,6 @@
       </div>
     </div>
 
-    <!-- WHY -->
     <section>
       <h2>Buying Home Items Shouldn’t Feel Risky</h2>
       <p class="lead">
@@ -211,7 +305,6 @@
       </p>
     </section>
 
-    <!-- BUNDLES -->
     <section id="bundles">
       <h2>Choose a Bundle. Done.</h2>
       <p class="lead">
@@ -257,7 +350,6 @@
       </div>
     </section>
 
-    <!-- GUARANTEES -->
     <section>
       <h2>Our Risk-Free Promise</h2>
       <p class="lead">
@@ -291,7 +383,6 @@
       </div>
     </section>
 
-    <!-- FINAL CTA -->
     <section class="final">
       <h2>Buy Once. Get It Right.</h2>
       <p class="lead">
