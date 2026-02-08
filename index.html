@@ -127,19 +127,6 @@
       -webkit-text-fill-color: #ffffff; /* Override gradient fill */
     }
 
-    /* Alternative bright gradient option (brighter than before) */
-    /*
-    .hero h1 {
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
-      font-weight: 800;
-      background: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 1.5rem;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    }
-    */
-
     .hero p {
       color: rgba(255, 255, 255, 0.98); /* Brighter text */
       font-size: clamp(1.1rem, 2vw, 1.35rem);
@@ -343,6 +330,27 @@
       animation: fadeInUp 1s ease forwards;
     }
 
+    /* WHATSAPP BUTTON STYLES */
+    .whatsapp-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #25D366;
+      color: white;
+      padding: 1rem 2.5rem;
+      font-weight: 700;
+      border-radius: 100px;
+      font-size: 1rem;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+      background: #1da851;
+    }
+
     /* MOBILE OPTIMIZATIONS - ENHANCED FOR HERO IMAGE VISIBILITY */
     @media (max-width: 768px) {
       .container { 
@@ -397,6 +405,10 @@
       
       .final {
         padding: 5rem 1.5rem;
+      }
+      
+      .whatsapp-cta {
+        padding: 0.9rem 2rem;
       }
     }
 
@@ -495,7 +507,9 @@
             <li>✔ Artificial plants</li>
             <li>✔ Decorative ornaments</li>
           </ul>
-          <a href="#" class="cta">Order This Bundle</a>
+          <a href="https://wa.me/2347018802732?text=Hi%20498%20Interiors!%20I'm%20interested%20in%20the%20Bedroom%20Upgrade%20Bundle.%20Can%20you%20tell%20me%20more%20about%20availability%20and%20pricing?" class="whatsapp-cta" target="_blank">
+            Order This Bundle
+          </a>
         </div>
 
         <div class="bundle">
@@ -507,7 +521,9 @@
             <li>✔ Ornaments</li>
             <li>✔ Optional furniture add-ons</li>
           </ul>
-          <a href="#" class="cta">Order This Bundle</a>
+          <a href="https://wa.me/2347018802732?text=Hi%20498%20Interiors!%20I'm%20interested%20in%20the%20Living%20Room%20Refresh%20Bundle.%20Can%20you%20share%20more%20details%20and%20pricing?" class="whatsapp-cta" target="_blank">
+            Order This Bundle
+          </a>
         </div>
 
         <div class="bundle">
@@ -518,7 +534,9 @@
             <li>✔ Neutral & luxury color options</li>
             <li>✔ Quality-checked items only</li>
           </ul>
-          <a href="#" class="cta">Browse Furniture</a>
+          <a href="https://wa.me/2347018802732?text=Hi%20498%20Interiors!%20I'd%20like%20to%20browse%20your%20Essential%20Furniture%20Picks.%20Can%20you%20send%20me%20the%20available%20options%20and%20prices?" class="whatsapp-cta" target="_blank">
+            Browse Furniture
+          </a>
         </div>
       </div>
     </section>
@@ -562,7 +580,9 @@
         Limited stock per bundle.
         Once a collection sells out, it's gone.
       </p>
-      <a href="#" class="cta">Order on WhatsApp</a>
+      <a href="https://wa.me/2347018802732?text=Hi%20498%20Interiors!%20I%20saw%20your%20website%20and%20I'm%20interested%20in%20your%20home%20bundles.%20Can%20you%20help%20me%20choose%20the%20right%20bundle%20for%20my%20home?" class="whatsapp-cta" target="_blank">
+        Order on WhatsApp
+      </a>
     </section>
 
   </div>
