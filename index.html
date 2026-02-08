@@ -117,50 +117,59 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     }
 
+    /* BRIGHTER HEADLINE - REMOVED GRADIENT, USING SOLID BRIGHT COLOR */
     .hero h1 {
       font-size: clamp(2.5rem, 8vw, 4.5rem);
       font-weight: 800;
-      /* DARKER, MORE CONTRASTY GRADIENT */
-      background: linear-gradient(to bottom, #ffffff 20%, #d4af37 80%);
+      color: #ffffff; /* Solid bright white */
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.4);
+      -webkit-text-fill-color: #ffffff; /* Override gradient fill */
+    }
+
+    /* Alternative bright gradient option (brighter than before) */
+    /*
+    .hero h1 {
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-weight: 800;
+      background: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 1.5rem;
-      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Stronger shadow for depth */
-      letter-spacing: -0.02em;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
+    */
 
     .hero p {
       color: rgba(255, 255, 255, 0.98); /* Brighter text */
       font-size: clamp(1.1rem, 2vw, 1.35rem);
       max-width: 600px;
       margin: 0 auto 3rem;
-      font-weight: 500; /* Bolder paragraph */
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      font-weight: 500; /* Slightly bolder */
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
       line-height: 1.6;
     }
 
     .cta {
       display: inline-flex;
       align-items: center;
-      background: var(--text);
+      background: #ffffff; /* Pure white background */
       color: #000;
       padding: 1rem 2.5rem;
-      font-weight: 700; /* Bolder CTA */
+      font-weight: 700; /* Bolder */
       border-radius: 100px;
-      font-size: 1.1rem;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+      font-size: 1rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
       position: relative;
       z-index: 3;
-      border: 2px solid rgba(212, 175, 55, 0.3); /* Gold border for emphasis */
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .cta:hover {
-      transform: translateY(-3px);
+      transform: translateY(-2px);
       box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
       background: var(--accent);
       color: #000;
-      border-color: var(--accent);
     }
 
     /* TRUST STRIP - MADE MORE TRANSPARENT */
@@ -173,15 +182,14 @@
     }
 
     .trust div {
-      background: rgba(20, 20, 20, 0.5); /* Slightly more opaque for contrast */
+      background: rgba(20, 20, 20, 0.4); /* More transparent */
       backdrop-filter: blur(10px);
-      padding: 0.9rem 1.8rem;
+      padding: 0.8rem 1.5rem;
       border-radius: 100px;
-      border: 1px solid rgba(212, 175, 55, 0.2); /* Gold tint */
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.98);
-      font-weight: 600;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.98); /* Brighter text */
+      font-weight: 600; /* Bolder */
     }
 
     /* SECTION HEADERS */
@@ -193,11 +201,7 @@
       font-size: clamp(2rem, 5vw, 2.8rem);
       margin-bottom: 1.5rem;
       text-align: center;
-      font-weight: 800; /* Bolder section headers */
-      background: linear-gradient(to right, #ffffff, #d4af37);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: -0.02em;
+      font-weight: 700;
     }
 
     section p.lead {
@@ -206,7 +210,6 @@
       max-width: 650px;
       margin: 0 auto 4rem;
       font-size: 1.1rem;
-      font-weight: 400;
     }
 
     /* BUNDLE CARDS */
@@ -236,8 +239,6 @@
     .bundle h3 {
       margin-bottom: 1.5rem;
       font-size: 1.6rem;
-      font-weight: 700;
-      color: #ffffff;
     }
 
     .bundle ul {
@@ -301,7 +302,6 @@
       margin-bottom: 1rem;
       font-size: 1.2rem;
       color: var(--accent);
-      font-weight: 700;
     }
 
     .guarantee p {
@@ -321,10 +321,6 @@
 
     .final h2 {
       font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 800;
-      background: linear-gradient(to right, #ffffff, #d4af37);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
 
     /* FOOTER */
@@ -367,24 +363,21 @@
       .hero-content {
         padding: 2rem 1.5rem;
         margin: 0 0.5rem;
-        background: rgba(10, 10, 10, 0.25); /* Adjusted for better contrast */
+        background: rgba(10, 10, 10, 0.2); /* Even more transparent on mobile */
         backdrop-filter: blur(6px);
       }
       
       .hero h1 {
         font-size: clamp(2.2rem, 7vw, 3.5rem);
-        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-        /* DARKER GRADIENT FOR MOBILE */
-        background: linear-gradient(to bottom, #ffffff 15%, #d4af37 85%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #ffffff;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 4px 12px rgba(0, 0, 0, 0.5);
       }
       
       .hero p {
         font-size: clamp(1rem, 4vw, 1.2rem);
         margin-bottom: 2rem;
         color: rgba(255, 255, 255, 0.98);
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
         font-weight: 500;
       }
       
@@ -396,14 +389,10 @@
       .trust div {
         padding: 0.6rem 1rem;
         font-size: 0.8rem;
-        background: rgba(20, 20, 20, 0.6); /* More contrast on mobile */
-        border: 1px solid rgba(212, 175, 55, 0.25);
+        background: rgba(20, 20, 20, 0.3); /* More transparent on mobile */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.98);
         font-weight: 600;
-      }
-      
-      .cta {
-        padding: 0.9rem 2rem;
-        font-size: 1rem;
       }
       
       .final {
@@ -418,16 +407,12 @@
       
       .hero-content {
         padding: 1.5rem 1rem;
-        background: rgba(10, 10, 10, 0.3); /* Darker on very small screens */
+        background: rgba(10, 10, 10, 0.15); /* Minimal background on small screens */
         backdrop-filter: blur(4px);
       }
       
       .hero h1 {
-        font-size: clamp(2rem, 6vw, 3rem);
-        /* EVEN DARKER FOR SMALL SCREENS */
-        background: linear-gradient(to bottom, #f0f0f0 10%, #d4af37 90%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        font-size: clamp(1.8rem, 6vw, 2.8rem);
       }
       
       .trust {
@@ -448,16 +433,6 @@
         background-attachment: scroll;
       }
     }
-
-    /* ALTERNATIVE: SOLID COLOR HEADLINE OPTION */
-    /*
-    .hero h1 {
-      color: #ffffff;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-      -webkit-text-fill-color: #ffffff;
-      background: none;
-    }
-    */
 
     /* PRINT STYLES */
     @media print {
