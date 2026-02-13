@@ -219,74 +219,42 @@
       background: rgba(30, 30, 30, 0.6);
     }
 
-    /* --- Bedroom bundle: background photo + overlay --- */
-    .bundle.bedroom-bundle {
+    /* --- shared styles for photo-background bundles --- */
+    .bundle.bedroom-bundle,
+    .bundle.livingroom-bundle,
+    .bundle.furniture-bundle {
       background: none;
       position: relative;
       isolation: isolate;
       border: 1px solid rgba(255, 215, 0, 0.3);
+    }
+
+    .bundle.bedroom-bundle::before,
+    .bundle.livingroom-bundle::before,
+    .bundle.furniture-bundle::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 24px;
+      z-index: -2;
     }
 
     .bundle.bedroom-bundle::before {
-      content: '';
-      position: absolute;
-      inset: 0;
       background-image: url('bedroom.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-radius: 24px;
-      z-index: -2;
     }
-
-    .bundle.bedroom-bundle::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.45);
-      border-radius: 24px;
-      z-index: -1;
-      transition: background 0.3s ease;
-    }
-
-    .bundle.bedroom-bundle:hover::after {
-      background: rgba(0, 0, 0, 0.30);
-    }
-
-    .bundle.bedroom-bundle > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .bundle.bedroom-bundle .tag {
-      background: rgba(212, 175, 55, 0.8);
-      color: #000;
-      border: none;
-      font-weight: 700;
-      backdrop-filter: blur(4px);
-    }
-
-    /* --- Living Room bundle: background photo + overlay --- */
-    .bundle.livingroom-bundle {
-      background: none;
-      position: relative;
-      isolation: isolate;
-      border: 1px solid rgba(255, 215, 0, 0.3);
-    }
-
     .bundle.livingroom-bundle::before {
-      content: '';
-      position: absolute;
-      inset: 0;
       background-image: url('livingroom.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-radius: 24px;
-      z-index: -2;
+    }
+    .bundle.furniture-bundle::before {
+      background-image: url('furniture.jpg');
     }
 
-    .bundle.livingroom-bundle::after {
+    .bundle.bedroom-bundle::after,
+    .bundle.livingroom-bundle::after,
+    .bundle.furniture-bundle::after {
       content: '';
       position: absolute;
       inset: 0;
@@ -296,16 +264,22 @@
       transition: background 0.3s ease;
     }
 
-    .bundle.livingroom-bundle:hover::after {
+    .bundle.bedroom-bundle:hover::after,
+    .bundle.livingroom-bundle:hover::after,
+    .bundle.furniture-bundle:hover::after {
       background: rgba(0, 0, 0, 0.30);
     }
 
-    .bundle.livingroom-bundle > * {
+    .bundle.bedroom-bundle > *,
+    .bundle.livingroom-bundle > *,
+    .bundle.furniture-bundle > * {
       position: relative;
       z-index: 1;
     }
 
-    .bundle.livingroom-bundle .tag {
+    .bundle.bedroom-bundle .tag,
+    .bundle.livingroom-bundle .tag,
+    .bundle.furniture-bundle .tag {
       background: rgba(212, 175, 55, 0.8);
       color: #000;
       border: none;
@@ -619,8 +593,8 @@
           </a>
         </div>
 
-        <!-- Third bundle remains with default semi‑transparent background -->
-        <div class="bundle">
+        <!-- Furniture bundle with furniture.jpg background -->
+        <div class="bundle furniture-bundle">
           <span class="tag">Limited Stock</span>
           <h3>Essential Furniture Picks</h3>
           <ul>
